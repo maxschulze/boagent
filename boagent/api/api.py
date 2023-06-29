@@ -521,7 +521,8 @@ def generate_machine_configuration(hardware_data):
             "family": hardware_data['cpus'][0]['family']
         },
         "ram": sort_ram(hardware_data["rams"]),
-        "disk": sort_disks(hardware_data["disks"]),
+        # Remove disk as it returns errors
+        # "disk": sort_disks(hardware_data["disks"]),
         "motherboard": hardware_data["mother_board"] if "mother_board" in hardware_data else {"units": 1},
         # TODO: improve once the API provides more detail input
         "power_supply": hardware_data["power_supply"] if "power_supply" in hardware_data else {"units": 1}
