@@ -25,7 +25,7 @@ jobs:
           python-version: '3.9'
 
       - name: Build  docker image
-        run: docker build . --tag ghcr.io/boavizta/boagent:$(python3 setup.py --version)
+        run: docker build . --tag ghcr.io/maxschulze/boagent:$(python3 setup.py --version)
 
       - name: Push docker image
-        run: docker push ghcr.io/boavizta/boagent:$(python3 setup.py --version)
+        run: docker push ghcr.io/maxschulze/boagent:$(python3 setup.py --version)
